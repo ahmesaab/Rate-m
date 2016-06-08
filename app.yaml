@@ -1,0 +1,23 @@
+application: the-project-3
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /test
+  script: test.php
+
+- url: /public_html
+  static_dir: public_html
+
+- url: /login-callback
+  script: /php/services/login-callback.php
+- url: /logout
+  script: /php/services/logout-callback.php
+- url: /rate
+  script: /php/services/rate.php
+
+- url: /profile
+  script: /php/pages/profile.php
+- url: /
+  script: /php/pages/home.php
